@@ -47,7 +47,7 @@ const Home = () => {
       />
 
       {enhancedImage && (
-        <Download downloadable={enhancedImage} />
+        <Download imageURL={enhancedImage} />
       )}
 
     </div>
