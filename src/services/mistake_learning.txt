@@ -1,0 +1,57 @@
+Why response.data.data.task_id?
+When you make an API call with Axios, the response object looks like this:
+
+Visualizing the structure of API:
+-response (Axios response object)
+  |_data (the whole JSON from the server)
+      |_status
+        message
+        data (the actual useful data)
+           |_task_id
+
+
+{
+  data: { ... }, // the actual data from the server
+  status: 200,
+  statusText: "OK",
+  headers: { ... },
+  config: { ... },
+  request: { ... }
+}
+
+
+"response.data" is everything the server sent back as the "body" of the response.
+Now, your server’s response (the actual JSON) looks like:
+
+So, inside response.data, there is another data object, and inside that is task_id.
+
+{
+  "status": 200,
+  "message": "success",
+  "data": {
+    "task_id": "fa5214f5-242b-4e3a-9600-0efb48e5de50"
+  }
+}
+
+So, to get the task_id, you need:
+
+The first .data is from Axios (the whole response body).
+The second .data is from your API’s JSON structure (the actual useful data).
+Why do APIs do this?
+APIs often wrap the real data in a "container" with status and message fields, so you can always check if the request was successful and see any error messages.
+
+In summary
+response.data → the whole response body from the server.
+response.data.data → the "data" field inside the response body.
+response.data.data.task_id → the actual value you want.
+Tip:
+If you ever get confused, log the whole response.data to the console and look at its structure!
+
+Your fix:
+Change
+
+to
+
+so you get the correct value.
+
+Let me know if you want a visual diagram or more examples!
