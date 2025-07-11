@@ -3,7 +3,6 @@ import ImageUpload from "./ImageUpload";
 import ImagePreview from "./ImagePreview";
 import { enhancedImageAPI } from "../services/enhanceImageAPI";
 import Download from "./Download";
-import { downloadEnhancedImage } from "../services/downloadImage";
 
 const Home = () => {
   const [uploadImage, setUploadImage] = useState(null);

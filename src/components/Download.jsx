@@ -2,7 +2,7 @@ import React from "react";
 import { FaDownload } from "react-icons/fa6";
 import { downloadEnhancedImage } from "../services/downloadImage";
 
-const Download = ({ downloadable: imageURL }) => (
+const Download = ({ imageURL: imageURL }) => (
   <button
     onClick={() => {
       downloadEnhancedImage(imageURL);
