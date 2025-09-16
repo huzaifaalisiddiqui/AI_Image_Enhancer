@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_KEY = "wxxwozgddaqxqzdrn";
+const API_KEY = "wxwkixgcw06n7toly";
 const BASE_URL = "https://techhk.aoscdn.com/";
 const MAX_RETRIES = 10; // Maximum number of retries for polling
 
