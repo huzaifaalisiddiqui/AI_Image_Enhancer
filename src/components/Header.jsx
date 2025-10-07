@@ -9,7 +9,7 @@ const Header = () => {
           alt="PicFix logo"
           className="h-16 pt-1 w-auto mr-4 filter invert brightness-0"
         />
-        <h1 className="text-white text-lg md:text-2xl font-semibold">
+        <h1 className="text-white text-lg sm:hidden md:text-2xl font-semibold">
           Ultimate solution for image enhancements
         </h1>
       </div>
